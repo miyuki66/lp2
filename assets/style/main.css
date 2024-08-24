@@ -3,7 +3,7 @@
 /* ページ全体のスタイル
 ------------------------------------------ */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', sans-serif;
   line-height: 1.75;
   color: #000;
 }
@@ -24,14 +24,12 @@ li {
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 70px;
   font-size: calc(10 * 100vw / 390);
 }
 
 @media (min-width:768px) {
   html {
-    font-size: calc(10 * 100vw / 1200); /* 1200はPCカンプのコンテンツ幅 */
+    font-size: calc(10 * 100vw / 1500); 
   }
 }
 
@@ -41,9 +39,305 @@ html {
   }
 }
 
+/* 部品
+------------------------------------------ */
+.contact {
+  background-color: #F0F4FF;
+  padding: 39px 10px 40px 10px;
+  margin: 140px 16px 50px 16px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 62px;
+  }
+}
+
+.contact-text {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-text {
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+
+.contact-text-goods {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .contact-text-goods {
+    font-size: 24px;
+  }
+}
+
+.contact-text-cost {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .contact-text-cost {
+    font-size: 16px;
+  }
+}
+
+/* ボタンの共通スタイル */
+.button {
+  position: relative;
+  display: block;
+  border-radius: 6.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 12px;
+  color: #fff;
+  width: 300px;
+  height: 58px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 300px;
+    height: 58px;
+    font-size: 18px;
+    margin: 0;
+  
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-button {
+    display: flex;
+    gap: 30px;
+  
+  }
+}
+
+.button-blue {
+  background-color: #46C4DB;
+  margin-bottom: 20px;
+}
+
+.button-blue:hover {
+  background-color: #fff;
+  color: #46C4DB;
+  border: 3px solid #46C4DB;
+}
+
+.button-green {
+  background-color: #5DD5AB;
+}
+
+.button-green:hover {
+  background-color: #fff;
+  color: #5DD5AB;
+  border: 3px solid #5DD5AB;
+}
+
+.section-title {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 18px;
+  padding-bottom: 9px;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 36px;
+    padding-top: 57px;
+    padding-bottom: 25px;
+  }
+}
+
+.section-title-Japanese{
+  font-size: 16px;
+  font-weight: 500;
+}
+
 /* ヘッダー
 ------------------------------------------ */
 .header {
   background-image: url("/assets/image/mainVIsual_sp_01.png");
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
 }
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url("/assets/image/mainVIsual_pc_01.png");
+    height: 720px;
+  }
+}
+
+.header.container{
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .header.container{
+    max-width: 1500px;
+    margin-inline: auto;
+  }
+}
+
+.header-title {
+  font-family:'Marcellus', sans-serif;
+  font-size: 24px;
+  padding-top: 24px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 28px;
+  }
+}
+
+.header-item{
+  padding-left: 5%;
+  padding-top: 355px;
+}
+
+@media (min-width: 768px) {
+  .header-item {
+    align-items: center;
+    padding-left: 200px;
+    padding-top: 200px;
+  }
+}
+
+.header-item-top{
+  font-family:'Marcellus', sans-serif;
+  font-size: 41px;
+  line-height: 1.15;
+  letter-spacing: 11px;
+}
+
+@media (min-width: 768px) {
+  .header-item-top {
+    font-size: 50px;
+  }
+}
+
+.header-item-bottom{
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+@media (min-width: 768px) {
+  .header-item-bottom {
+    font-size: 25px;
+  }
+}
+
+/* カバー
+------------------------------------------ */
+.cover {
+  background-image: url("/assets/image/mask_sp_01.png");
+  background-position: center;
+  background-size: cover;
+  height: 680px;
+  color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .cover {
+    background-image: url("/assets/image/mask_pc_01.png");
+    height: 550px;
+  }
+}
+
+.cover.container{
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .cover .container{
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-top: 120px;
+  padding-left: 800px;
+  }
+}
+
+.cover-title{
+  padding-top: 57px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cover-title{
+    text-align: start;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.cover-title-english{
+  font-family:'EB Garamond', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .cover-title-english{
+    font-size: 38px;
+  }
+}
+
+.cover-title-Japanese{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .cover-title-Japanese{
+    font-size: 24px;
+  }
+}
+
+.cover-text{
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 2.0;
+}
+
+@media (min-width: 768px) {
+  .cover-text{
+    width: 429px;
+    padding: 0;
+  }
+}
+
+/* ボイス
+------------------------------------------ */
+.voices-slick-item{
+  display: flex;
+  background: #DBF7F9;
+  text-align: center;
+}
+
