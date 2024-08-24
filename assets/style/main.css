@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.75;
+  color: #000;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  font-size: calc(10 * 100vw / 390);
+}
+
+@media (min-width:768px) {
+  html {
+    font-size: calc(10 * 100vw / 1200); /* 1200はPCカンプのコンテンツ幅 */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* ヘッダー
+------------------------------------------ */
+.header {
+  background-image: url("/assets/image/mainVIsual_sp_01.png");
+  background-size: contain;
+}
